@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%; /* Dark gray for text */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    --primary: 94 32% 32%; /* #4F6B34 - Dark green */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 94 48% 47%; /* #6CAF40 - Medium green */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 30 75% 30%; /* #8B4513 - Brown */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 30 75% 30%; /* Brown accent color */
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 0 0% 20%; /* Dark gray */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 0 0% 91%;
+    --sidebar-ring: 0 0% 65%;
+  }
+
+  .dark {
+    --background: 0 0% 7%; /* Very dark gray */
+    --foreground: 0 0% 90%; /* Light gray for text */
+
+    --card: 0 0% 10%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 90%; /* Light gray */
+
+    --popover: 0 0% 10%; /* Matching card */
+    --popover-foreground: 0 0% 90%; /* Light gray */
+
+    --primary: 94 48% 47%; /* #6CAF40 - Medium green */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 94 32% 32%; /* #4F6B34 - Dark green */
+    --secondary-foreground: 0 0% 100%; /* White */
+
+    --muted: 0 0% 15%; /* Dark gray */
+    --muted-foreground: 0 0% 65%; /* Medium gray */
+
+    --accent: 30 75% 30%; /* #8B4513 - Brown */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%; /* Dark gray border */
+    --input: 0 0% 20%; /* Dark gray input */
+    --ring: 30 75% 30%; /* Brown accent color */
+    
+    --sidebar-background: 0 0% 10%; /* Slightly lighter than background */
+    --sidebar-foreground: 0 0% 90%; /* Light gray */
+    --sidebar-primary: 94 48% 47%; /* #6CAF40 - Medium green */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 0 0% 15%; /* Dark gray */
+    --sidebar-accent-foreground: 0 0% 90%; /* Light gray */
+    --sidebar-border: 0 0% 20%; /* Dark gray border */
+    --sidebar-ring: 94 48% 47%; /* Medium green */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
