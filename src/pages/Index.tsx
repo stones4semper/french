@@ -11,6 +11,7 @@ import healthImage from "@/assets/health-wellness.jpg";
 import youthImage from "@/assets/youth-family.jpg";
 import civicImage from "@/assets/civic-engagement.jpg";
 import eventsImage from "@/assets/cultural-events.jpg";
+import eventsImage2 from "@/assets/cultural-events-1.jpg";
 
 const Index = () => {
   const programs = [
@@ -161,7 +162,7 @@ const Index = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative h-64 lg:h-auto">
                   <img 
-                    src={eventsImage} 
+                    src={eventsImage2} 
                     alt="Francophone Family Festival"
                     className="w-full h-full object-cover"
                   />

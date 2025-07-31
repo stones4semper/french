@@ -135,7 +135,7 @@ const Programs = () => {
                         <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                           <IconComponent className="h-6 w-6 text-accent" />
                         </div>
-                        <Badge variant="outline">{index + 1}</Badge>
+                        {/* <Badge variant="outline">{index + 1}</Badge> */}
                       </div>
                       <h3 className="text-2xl lg:text-3xl font-bold">{program.title}</h3>
                       <p className="text-muted-foreground leading-relaxed">
