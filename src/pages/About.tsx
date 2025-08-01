@@ -4,6 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Eye, Heart, Users, Handshake, Scale } from "lucide-react";
+import michel from "@/assets/michel-shako.jpeg";
+import Julie from "@/assets/Julie.jpeg";
+import pelagie from "@/assets/pelagie-yapi-nianzale.jpeg";
+import alfred from "@/assets/alfred-lalie-nianzale.jpeg";
+
 
 const About = () => {
   const values = [
@@ -42,9 +47,31 @@ const About = () => {
     "Foster leadership and participation among francophone youth and families."
   ];
 
+  const team = [
+    {
+      img: michel,
+      name: "Michel Shako",
+      role: "Executive Director"
+    },
+    {
+      img: Julie,
+      name: "Julie",
+      role: "Program Director"
+    },
+    {
+      img: alfred,
+      name: "Alfred Lalie Nianzale",
+      role: "" 
+    },
+    {
+      img: pelagie,
+      name: "Pelagie Yapi Nianzale",
+      role: "" 
+    }
+  ];
+
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="bg-gradient-to-b from-muted/20 to-background py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -62,7 +89,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Vision & Mission Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -97,7 +123,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Core Values Section */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
@@ -130,7 +155,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Strategic Goals Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -157,7 +181,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
@@ -167,22 +190,49 @@ const About = () => {
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto text-center">
-            <Card className="p-8">
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground italic">
-                  INCLUDE HEADSHOTS, NAMES AND SHORT BIOS OF LEADERSHIP TEAM
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Detailed team profiles and leadership information will be added here.
-                </p>
+          <div className="max-w-6xl mx-auto px-4">
+            <Card className="p-8 bg-gradient-to-br from-white to-gray-50 shadow-lg rounded-xl overflow-hidden">
+              <CardContent>
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl font-bold text-gray-900 mb-3">Meet Our Leadership</h2>
+                  <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Passionate leaders driving our vision forward with expertise and dedication.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                  {team.map((member, index) => (
+                    <div 
+                      key={index} 
+                      className="group relative flex flex-col items-center transition-all duration-300 hover:scale-105"
+                    >
+                      <div className="relative mb-6">
+                        <div className="absolute inset-0 bg-primary rounded-full opacity-10 group-hover:opacity-20 transition-all duration-500 scale-90 group-hover:scale-110"></div>
+                        <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white shadow-xl relative z-10">
+                          <img 
+                            src={member.img} 
+                            alt={member.name} 
+                            className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="text-center px-2">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                        {member.role && (
+                          <p className="text-primary font-medium mb-3">{member.role}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Join Us Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">

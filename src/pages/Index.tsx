@@ -184,12 +184,12 @@ const Index = () => {
                     <p className="font-medium">
                       Register today to reserve your spot and bring your family and friends.
                     </p>
-                    <Button asChild size="lg" className="w-full sm:w-auto">
+                    {/* <Button asChild size="lg" className="w-full sm:w-auto">
                       <Link to="/events">
                         Register Now
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </div>
@@ -231,9 +231,9 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Share your time and skills to support our programs and events.
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  {/* <Button asChild variant="outline" className="w-full">
                     <Link to="/get-involved">Learn more</Link>
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
 
@@ -246,9 +246,9 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Collaborate with us to expand our impact and reach.
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  {/* <Button asChild variant="outline" className="w-full">
                     <Link to="/get-involved">Partner with us</Link>
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
 
@@ -261,9 +261,9 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Support our mission with a financial contribution.
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  {/* <Button asChild variant="outline" className="w-full">
                     <Link to="/support">Donate now</Link>
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
             </div>
