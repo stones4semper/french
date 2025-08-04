@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { comp_fone, comp_email } from "@/utils/constants";
 
 const Footer = () => {
   return (
@@ -36,13 +37,13 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground">
-                  (Insert phone number)
+                  {comp_fone}
                 </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground">
-                  info@labonnesemence.ca
+                  {comp_email}
                 </span>
               </div>
             </div>

@@ -1,9 +1,10 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Calendar, MapPin, Clock, Users, ArrowRight } from "lucide-react";
+import BreadcrumbWithHero from "@/components/BreadcrumbWithHero";
 import eventsImage from "@/assets/cultural-events.jpg";
 
 const Events = () => {
@@ -76,12 +77,14 @@ const Events = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      <BreadcrumbWithHero title="Events" breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Events", href: "/events" }
+      ]} />
       <section className="relative bg-gradient-to-b from-muted/20 to-background py-20 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <Badge variant="outline" className="w-fit">Events</Badge>
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
                 Celebrating culture, connection, and community{" "}
                 <span className="text-accent">year-round</span>

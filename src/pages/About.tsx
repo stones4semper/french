@@ -1,9 +1,9 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Eye, Heart, Users, Handshake, Scale } from "lucide-react";
+import BreadcrumbWithHero from "@/components/BreadcrumbWithHero";
 import michel from "@/assets/michel-shako.jpeg";
 import Julie from "@/assets/Julie.jpeg";
 import pelagie from "@/assets/pelagie-yapi-nianzale.jpeg";
@@ -72,10 +72,13 @@ const About = () => {
 
   return (
     <Layout>
-      <section className="bg-gradient-to-b from-muted/20 to-background py-20 lg:py-32">
+      <BreadcrumbWithHero title="About Us" breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "About Us", href: "/about" }
+      ]} />
+      <section className="bg-gradient-to-b from-muted/20 to-background p-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge variant="outline" className="mx-auto">About Us</Badge>
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
               Who We Are
             </h1>
@@ -87,7 +90,7 @@ const About = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> 
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">

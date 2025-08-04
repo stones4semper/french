@@ -1,9 +1,10 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import BreadcrumbWithHero from "@/components/BreadcrumbWithHero";
 import { ArrowRight, Heart, Gift, Users, Building, Calendar, Star } from "lucide-react";
+import { comp_fone } from "@/utils/constants";
 
 const Support = () => {
   const supportAreas = [
@@ -79,11 +80,13 @@ const Support = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      <BreadcrumbWithHero title="Support Us" breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Support Us", href: "/support" }
+      ]} />
       <section className="bg-gradient-to-b from-muted/20 to-background py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge variant="outline" className="mx-auto">Support Us</Badge>
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
               Your support helps us grow{" "}
               <span className="text-accent">stronger, together.</span>
@@ -98,7 +101,6 @@ const Support = () => {
         </div>
       </section>
 
-      {/* Why Support Matters */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -131,7 +133,6 @@ const Support = () => {
         </div>
       </section>
 
-      {/* Ways to Support */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
@@ -242,7 +243,7 @@ const Support = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl lg:text-4xl font-bold">Ready to give or learn more?</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Contact us at donate@labonnesemence.ca or call us at (insert number). We would be happy to discuss how your support can make a lasting impact.
+              Contact us at donate@labonnesemence.ca or call us at {comp_fone}. We would be happy to discuss how your support can make a lasting impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">

@@ -1,9 +1,9 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Handshake, Heart, UserPlus, Share2, Lightbulb } from "lucide-react";
+import { ArrowRight, Users, Handshake, Heart, UserPlus, Lightbulb } from "lucide-react";
+import BreadcrumbWithHero from "@/components/BreadcrumbWithHero";
 
 const GetInvolved = () => {
   const volunteerOpportunities = [
@@ -85,11 +85,13 @@ const GetInvolved = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      <BreadcrumbWithHero title="Get Involved" breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Get Involved", href: "/get-involved" }
+      ]} />
       <section className="bg-gradient-to-b from-muted/20 to-background py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge variant="outline" className="mx-auto">Get Involved</Badge>
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
               Be part of something meaningful.{" "}
               <span className="text-accent">Support francophone growth and connection.</span>

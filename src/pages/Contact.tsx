@@ -1,20 +1,23 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import BreadcrumbWithHero from "@/components/BreadcrumbWithHero";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { comp_fone, comp_email } from "@/utils/constants";
 
 const Contact = () => {
   return (
     <Layout>
-      {/* Hero Section */}
+      <BreadcrumbWithHero title="Contact Us" breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Contact Us", href: "/contact" }
+      ]} />
       <section className="bg-gradient-to-b from-muted/20 to-background py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge variant="outline" className="mx-auto">Contact Us</Badge>
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
               We'd love to hear from you.{" "}
               <span className="text-accent">Let's stay connected.</span>
@@ -66,14 +69,14 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-accent" />
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-muted-foreground">(Insert phone number)</p>
+                      <p className="text-muted-foreground">{comp_fone}</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-accent" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">info@labonnesemence.ca</p>
+                      <p className="text-muted-foreground">{comp_email}</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">

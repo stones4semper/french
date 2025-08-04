@@ -1,9 +1,7 @@
 import Layout from "@/components/Layout";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { ArrowRight, Users, BookOpen, Activity, Heart, Vote, Calendar } from "lucide-react";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { Users, BookOpen, Activity, Heart, Vote, Calendar } from "lucide-react";
+import BreadcrumbWithHero from "@/components/BreadcrumbWithHero";
 import settlementImage from "@/assets/settlement-services.jpg";
 import educationImage from "@/assets/education-programs.jpg";
 import healthImage from "@/assets/health-wellness.jpg";
@@ -97,11 +95,13 @@ const Programs = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      <BreadcrumbWithHero title="Programs" breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Programs", href: "/programs" }
+      ]} />
       <section className="bg-gradient-to-b from-muted/20 to-background py-20 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge variant="outline" className="mx-auto">Programs and Services</Badge>
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
               Comprehensive Programs for Every Need
             </h1>
@@ -135,7 +135,6 @@ const Programs = () => {
                         <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                           <IconComponent className="h-6 w-6 text-accent" />
                         </div>
-                        {/* <Badge variant="outline">{index + 1}</Badge> */}
                       </div>
                       <h3 className="text-2xl lg:text-3xl font-bold">{program.title}</h3>
                       <p className="text-muted-foreground leading-relaxed">
