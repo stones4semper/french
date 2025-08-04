@@ -11,7 +11,7 @@ import { comp_fone, comp_email } from "@/utils/constants";
 import axios from "axios";
 import { useToast } from '@/components/ui/use-toast';
 
-const api_url = `https://smtp.labonnesemence.ca/contact-us.php`
+const api_url = `https://smtp.labonnesemence.ca/contact-us/index.php`
 interface FormData {
 	name: string;
 	email: string;
